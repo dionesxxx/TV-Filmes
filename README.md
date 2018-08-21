@@ -24,7 +24,7 @@ Eles são as operações do aplicativo e podem conter regras de negócios espec�
 Essa camada é isolada do banco de dados, da interface do usuário ou de qualquer estrutura comum. <br />
 Todas as classes de caso de uso estendem a classe abstrata [UseCase] que configura os planejadores de Extensões reativas. <br />
 
-[UseCase]: domain/src/main/java/br/diones/domain/UseCase.kt "Classe Use Case"
+[UseCase]: domain/src/main/kotlin/br/diones/domain/UseCase.kt "Classe Use Case"
 [Clean Architecture]: https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html "The Clean Architecture by Robert C. Martin"
-[Genre]: domain/src/main/java/br/diones/domain/entity/Genre.kt "Entidade Genre"
-[Movie]: domain/src/main/java/br/diones/domain/entity/Movie.kt "Entidade Movie"
+[Genre]: domain/src/main/kotlin/br/diones/domain/entity/Genre.kt "Entidade Genre"
+[Movie]: domain/src/main/kotlin/br/diones/domain/entity/Movie.kt "Entidade Movie"
