@@ -13,10 +13,7 @@ class MovieGatewayImpl(private val movieRepository: MovieRepository) : MovieGate
     override fun getMoviesByGenre(genre: String?): Observable<List<Movie>> =
             movieRepository.getByGenre(genre)
                     .doOnError { println("Movie by Genre(${it.message}) Error") }
-                    .map { it.map {
-                        Log.d("MOVIE", it.toString())
-                        mapper.toEntity(it, genre?.toInt())
-                    } }
+                    .map { it.map {mapper.toEntity(it, genre?.toInt())  } }
 
     override fun getMoviesById(id: Int?): Observable<Movie> =
         movieRepository.getById(id)

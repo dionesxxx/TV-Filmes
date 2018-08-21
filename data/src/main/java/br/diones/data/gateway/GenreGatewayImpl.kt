@@ -14,9 +14,6 @@ class GenreGatewayImpl(private val genreRepository: GenreRepository) : GenreGate
     override fun getGenres(): Observable<List<Genre>> =
             genreRepository.getAll()
                     .doOnError { println("Genre Type Error") }
-                    .map { it.map {
-                        Log.d("GENRE", it.toString())
-                        mapper.toEntity(it)
-                    } }
+                    .map { it.map {mapper.toEntity(it) } }
 
 }
